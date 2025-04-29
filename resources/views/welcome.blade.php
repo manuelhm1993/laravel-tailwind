@@ -11,13 +11,17 @@
 <body>
     {{-- A diferencia de bootstrap en tailwind no es obligatorio un container para usar el grid --}}
     <section class="container">
-        {{-- La grid de tailwind igual que la de bootstrap es de un máximo de 12 columnas --}}
-        <div class="grid grid-cols-4 grid-rows-2 gap-4">
-            <article class="bg-blue-100 text-gray-950 text-center py-3 rounded-xl col-span-2 col-start-2 row-span-2">Artículo 1</article>
-            <article class="bg-blue-200 text-gray-950 text-center py-3 rounded-xl col-start-1 row-end-1">Artículo 2</article>
+        {{-- Hacer que fluyan las columnas a través de las filas, cambiar la distribución horizonal a vertical --}}
+        <div class="grid grid-flow-col grid-rows-3 grid-cols-4 gap-4">
+            <article class="bg-blue-100 text-gray-950 text-center py-3 rounded-xl">Artículo 1</article>
+            <article class="bg-blue-200 text-gray-950 text-center py-3 rounded-xl">Artículo 2</article>
             <article class="bg-blue-300 text-gray-950 text-center py-3 rounded-xl">Artículo 3</article>
-            <article class="bg-blue-400 text-gray-950 text-center py-3 rounded-xl col-end-5">Artículo 4</article>
-            <article class="bg-blue-500 text-white text-center py-3 rounded-xl col-start-1 row-end-2">Artículo 5</article>
+            <article class="bg-blue-400 text-gray-950 text-center py-3 rounded-xl">Artículo 4</article>
+            <article class="bg-blue-500 text-white text-center py-3 rounded-xl">Artículo 5</article>
+            <article class="bg-blue-600 text-white text-center py-3 rounded-xl">Artículo 6</article>
+            <article class="bg-blue-700 text-white text-center py-3 rounded-xl">Artículo 7</article>
+            <article class="bg-blue-800 text-white text-center py-3 rounded-xl">Artículo 8</article>
+            <article class="bg-blue-900 text-white text-center py-3 rounded-xl">Artículo 9</article>
         </div>
     </section>
 </body>
