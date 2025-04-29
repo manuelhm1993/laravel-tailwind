@@ -9,7 +9,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <section class="container">
+    {{-- Se puede trabajar de esta manera para hacer que container se centre, pero no es escalable --}}
+    <section class="container mx-auto">
         <h1>Inicio del curso de Tailwindcss - prueba h1</h1>
         <h2>Inicio del curso de Tailwindcss - prueba h2</h2>
         <h3>Inicio del curso de Tailwindcss - prueba h3</h3>
