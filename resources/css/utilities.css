@@ -1,7 +1,11 @@
 @utility container {
+    /* Esto aplica un mx-auto */
     margin-inline: auto;
+
+    /* Esto aplica un px-1 */
     padding-inline: 1rem;
 
+    /* Esto vuelve responsive el padding aplicado según los puntos de quiebre */
     @media (min-width: 640px) {
         padding-inline: 1.5rem;
     }
