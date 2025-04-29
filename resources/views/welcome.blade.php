@@ -11,8 +11,8 @@
 <body>
     {{-- A diferencia de bootstrap en tailwind no es obligatorio un container para usar el grid --}}
     <section class="container">
-        {{-- La grid de tailwind igual que la de bootstrap es de un máximo de 12 columnas --}}
-        <div class="grid grid-cols-12 gap-4">
+        {{-- La grid de tailwind igual que la de bootstrap es de un máximo de 12 columnas, pero se puede personalizar, en este caso se modificó a 16 columnas --}}
+        <div class="grid grid-cols-[repeat(16,_minmax(0,_1fr))] gap-4">
             <article class="bg-blue-100 text-gray-950 text-center py-3 rounded-xl">Artículo 1</article>
             <article class="bg-blue-200 text-gray-950 text-center py-3 rounded-xl">Artículo 2</article>
             <article class="bg-blue-300 text-gray-950 text-center py-3 rounded-xl">Artículo 3</article>
@@ -25,6 +25,10 @@
             <article class="bg-blue-200 text-gray-950 text-center py-3 rounded-xl">Artículo 10</article>
             <article class="bg-blue-300 text-gray-950 text-center py-3 rounded-xl">Artículo 11</article>
             <article class="bg-blue-400 text-gray-950 text-center py-3 rounded-xl">Artículo 12</article>
+            <article class="bg-blue-500 text-white text-center py-3 rounded-xl">Artículo 13</article>
+            <article class="bg-blue-600 text-white text-center py-3 rounded-xl">Artículo 14</article>
+            <article class="bg-blue-700 text-white text-center py-3 rounded-xl">Artículo 15</article>
+            <article class="bg-blue-800 text-white text-center py-3 rounded-xl">Artículo 16</article>
         </div>
     </section>
 </body>
