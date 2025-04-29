@@ -9,11 +9,20 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <h1>Inicio del curso de Tailwindcss - prueba h1</h1>
-    <h2>Inicio del curso de Tailwindcss - prueba h2</h2>
-    <h3>Inicio del curso de Tailwindcss - prueba h3</h3>
-    <h4>Inicio del curso de Tailwindcss - prueba h4</h4>
-    <h5>Inicio del curso de Tailwindcss - prueba h5</h5>
-    <h6>Inicio del curso de Tailwindcss - prueba h6</h6>
+    {{-- A diferencia de bootstrap en tailwind no es obligatorio un container para usar el grid --}}
+    <section class="container">
+        {{-- Hacer que fluyan las columnas a través de las filas, cambiar la distribución horizonal a vertical --}}
+        <div class="grid grid-flow-col grid-rows-3 grid-cols-3 gap-4 mt-4">
+            <article class="bg-blue-100 text-gray-950 text-center py-3 rounded-xl">Artículo 1</article>
+            <article class="bg-blue-200 text-gray-950 text-center py-3 rounded-xl">Artículo 2</article>
+            <article class="bg-blue-300 text-gray-950 text-center py-3 rounded-xl">Artículo 3</article>
+            <article class="bg-blue-400 text-gray-950 text-center py-3 rounded-xl">Artículo 4</article>
+            <article class="bg-blue-500 text-white text-center py-3 rounded-xl">Artículo 5</article>
+            <article class="bg-blue-600 text-white text-center py-3 rounded-xl">Artículo 6</article>
+            <article class="bg-blue-700 text-white text-center py-3 rounded-xl">Artículo 7</article>
+            <article class="bg-blue-800 text-white text-center py-3 rounded-xl">Artículo 8</article>
+            <article class="bg-blue-900 text-white text-center py-3 rounded-xl">Artículo 9</article>
+        </div>
+    </section>
 </body>
 </html>
