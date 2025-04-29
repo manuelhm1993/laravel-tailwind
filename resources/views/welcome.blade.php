@@ -11,8 +11,8 @@
 <body>
     {{-- A diferencia de bootstrap en tailwind no es obligatorio un container para usar el grid --}}
     <section class="container">
-        {{-- La grid es el equivalente de row-cols de bootstrap y el gap es la separación entre columnas --}}
-        <div class="grid grid-cols-4 gap-4">
+        {{-- El diseño responsive respeta los breakpoints y es igual que en bootstrap --}}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <article class="bg-blue-200 text-white text-center py-3 rounded-xl">Artículo 1</article>
             <article class="bg-blue-300 text-white text-center py-3 rounded-xl">Artículo 2</article>
             <article class="bg-blue-400 text-white text-center py-3 rounded-xl">Artículo 3</article>
