@@ -11,7 +11,7 @@
 <body>
     <section class="container py-12">
         {{-- La clase columns determina como se organiza el contenido dentro de un elemento ideal para blogs --}}
-        <article class="columns-4 gap-4">
+        <article class="columns-3xs gap-4">
             @foreach ($images as $image)
                 <figure>
                     <img src="{{ asset('storage/'.$image) }}">
