@@ -12,12 +12,12 @@
     {{-- Se recomienda sustituir el space-y-4 en elementos grandes por flex flex-col gap-4 en la v4 --}}
     <section class="container py-12 space-y-4">
         {{-- Tailwind no impone un diseño pre-definido, pero proporciona clases para facilitar el mismo, las tres fuentes por defecto que maneja tailwind son font-sans, font-serif, font-mono --}}
-        <h1 class="font-sans text-6xl text-center md:text-4xl md:text-start font-bold">Este es un título de prueba</h1>
+        <h1 class="h1">Este es un título de prueba</h1>
         {{-- El interlineado por defecto es leading-6, a partir de ahí se puede disminuir o aumentar --}}
-        <p class="font-serif leading-6">
+        <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid provident iste magni eaque autem ducimus repudiandae accusamus, voluptatum tempora, eos deleniti soluta porro commodi neque architecto, dolores laborum nostrum.
         </p>
-        <ul class="font-mono text-xs list-disc italic ms-4">
+        <ul>
             <li>Elemento #01</li>
             <li>Elemento #02</li>
             <li>Elemento #03</li>
