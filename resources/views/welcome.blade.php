@@ -9,28 +9,17 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <section class="container py-12">
-        {{-- Display flex - permite mostrar los elementos en forma de grid --}}
-        <h2 class="text-4xl font-bold my-4 border-b-1">Display flexbox</h2>
-        <div class="flex">
-            <div class="bg-yellow-200">1</div>
-            <div class="bg-yellow-400">2</div>
-            <div class="bg-yellow-600">3</div>
-        </div>
-
-        {{-- Display inline - ocupan el mínimo del ancho disponible --}}
-        <h2 class="text-4xl font-bold my-4 border-b-1">Display inline por defecto</h2>
-        {{-- Modificar el display por defecto y volverlos block --}}
-        <span class="bg-blue-200 block">Etiqueta span</span>
-        <a class="bg-blue-400 block" href="#">Etiqueta a</a>
-
-        {{-- Display block - ocupan el máximo del ancho disponible --}}
-        <h2 class="text-4xl font-bold mb-4 border-b-1">Display block por defecto</h2>
-        {{-- Modificar el display por defecto y volverlos inline --}}
-        <p class="bg-red-200">Etiqueta p</p>
-        {{-- El display hidden permite ocultar elementos --}}
-        <div class="bg-red-400 my-4 p-3 uppercase font-bold hidden lg:inline-block">Etiqueta div</div>
-        <blockquote class="bg-red-600">Etiqueta blockquote</blockquote>
+    {{-- Se recomienda sustituir el space-y-4 en elementos grandes por flex flex-col gap-4 en la v4 --}}
+    <section class="container">
+        <h1 class="">Este es un título de prueba</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid provident iste magni eaque autem ducimus repudiandae accusamus, voluptatum tempora, eos deleniti soluta porro commodi neque architecto, dolores laborum nostrum.
+        </p>
+        <ul class="">
+            <li>Elemento #01</li>
+            <li>Elemento #02</li>
+            <li>Elemento #03</li>
+        </ul>
     </section>
 </body>
 </html>
