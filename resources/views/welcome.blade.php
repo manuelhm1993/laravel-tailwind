@@ -20,7 +20,7 @@
                 {{-- En caso de no existir imagenes se coloca texto --}}
                 @forelse ($content as $class => $parrafo)
                     {{-- Colocar un punto de quiebre a partir del segundo párrafo --}}
-                    <p class="{{ ($class === 'bg-blue-200') ? "{$class} break-after-column" : $class }}">{{ $parrafo }}</p>
+                    <p class="{{ ($class === 'bg-blue-200') ? "{$class} break-before-column" : $class }}">{{ $parrafo }}</p>
                 @empty
                     {{-- En caso de no existir texto se da un mensaje de error personalizado --}}
                     <div class="p-4 mb-4 text-2xl text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
