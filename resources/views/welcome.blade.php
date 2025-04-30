@@ -13,10 +13,11 @@
     <section class="container py-12 space-y-4">
         {{-- Tailwind no impone un diseño pre-definido, pero proporciona clases para facilitar el mismo, las tres fuentes por defecto que maneja tailwind son font-sans, font-serif, font-mono --}}
         <h1 class="font-sans text-6xl text-center md:text-4xl md:text-start font-bold">Este es un título de prueba</h1>
-        <p class="font-serif">
+        {{-- El interlineado por defecto es leading-6, a partir de ahí se puede disminuir o aumentar --}}
+        <p class="font-serif leading-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid provident iste magni eaque autem ducimus repudiandae accusamus, voluptatum tempora, eos deleniti soluta porro commodi neque architecto, dolores laborum nostrum.
         </p>
-        <ul class="font-mono text-xs list-disc ms-4">
+        <ul class="font-mono text-xs list-disc italic ms-4">
             <li>Elemento #01</li>
             <li>Elemento #02</li>
             <li>Elemento #03</li>
