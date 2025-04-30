@@ -10,6 +10,20 @@
 </head>
 <body>
     <section class="container py-12">
+        {{-- Display flex - permite mostrar los elementos en forma de grid --}}
+        <h2 class="text-4xl font-bold my-4 border-b-1">Display flexbox</h2>
+        <div class="flex">
+            <div class="bg-yellow-200">1</div>
+            <div class="bg-yellow-400">2</div>
+            <div class="bg-yellow-600">3</div>
+        </div>
+
+        {{-- Display inline - ocupan el mínimo del ancho disponible --}}
+        <h2 class="text-4xl font-bold my-4 border-b-1">Display inline por defecto</h2>
+        {{-- Modificar el display por defecto y volverlos block --}}
+        <span class="bg-blue-200 block">Etiqueta span</span>
+        <a class="bg-blue-400 block" href="#">Etiqueta a</a>
+
         {{-- Display block - ocupan el máximo del ancho disponible --}}
         <h2 class="text-4xl font-bold mb-4 border-b-1">Display block por defecto</h2>
         {{-- Modificar el display por defecto y volverlos inline --}}
@@ -17,12 +31,6 @@
         {{-- El display hidden permite ocultar elementos --}}
         <div class="bg-red-400 my-4 p-3 uppercase font-bold hidden lg:inline-block">Etiqueta div</div>
         <blockquote class="bg-red-600">Etiqueta blockquote</blockquote>
-
-        {{-- Display inline - ocupan el mínimo del ancho disponible --}}
-        <h2 class="text-4xl font-bold my-4 border-b-1">Display inline por defecto</h2>
-        {{-- Modificar el display por defecto y volverlos block --}}
-        <span class="bg-blue-200 block">Etiqueta span</span>
-        <a class="bg-blue-400 block" href="#">Etiqueta a</a>
     </section>
 </body>
 </html>
