@@ -1,0 +1,13 @@
+.h1 {
+    /* Permite crear clases personalizadas aplicando estilos tailwind para no repetirlos */
+    @apply font-sans text-6xl text-center md:text-4xl md:text-start font-bold;
+}
+
+p {
+    /* No solamente permite crear clases, también aplica estilos de etiqueta */
+    @apply font-serif leading-6;
+}
+
+ul {
+    @apply font-mono text-sm italic;
+}
