@@ -16,7 +16,9 @@
                 {{-- Enviar la segunda clase para validarla --}}
                 {{ App\Utilities\Common::validateMontserratType(explode(' ', $classes)[1] ?? '') }}
             </h2>
-            <p class="{{ $classes }}">{{ $parrafo }}</p>
+
+            {{-- Manipular el espaciado entre letras: letter-spacing --}}
+            <p class="{{ (explode(' ', $classes)[1] == 'font-regular') ? $classes . ' tracking-widest' : $classes }}">{{ $parrafo }}</p>
         @empty
             <h1 class="h1 font-bold">Sin contenido</h1>
         @endforelse
