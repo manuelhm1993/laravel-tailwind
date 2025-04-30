@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="container py-12">
-        <article class="columns-3xs gap-4">
+        <article class="columns-2">
             {{-- Recorrer las imagenes traidas desde el controlador --}}
             @forelse ($images as $image)
                 <figure>
@@ -18,8 +18,8 @@
                 </figure>
             @empty
                 {{-- En caso de no existir imagenes se coloca texto --}}
-                @forelse ($content as $parrafo)
-                    <p>{{ $parrafo }}</p>
+                @forelse ($content as $class => $parrafo)
+                    <p class="{{ $class }}">{{ $parrafo }}</p>
                 @empty
                     {{-- En caso de no existir texto se da un mensaje de error personalizado --}}
                     <div class="p-4 mb-4 text-2xl text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
@@ -32,7 +32,7 @@
     </section>
 
     <script>
-        // Remover las clases columns-3xs y gap del article en caso de que se lance el alert
+        // Remover las clases columns-2 y gap del article en caso de que se lance el alert
         document.addEventListener('DOMContentLoaded', (e) => {
             const alert = document.querySelector('.container div[role="alert"]');
 
@@ -40,7 +40,7 @@
             {
                 const article = document.querySelector('.container article');
 
-                article.classList.remove('columns-3xs', 'gap-4');
+                article.classList.remove('columns-2');
             }
         });
     </script>
