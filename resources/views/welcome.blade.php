@@ -13,9 +13,10 @@
         {{-- Display block - ocupan el máximo del ancho disponible --}}
         <h2 class="text-4xl font-bold mb-4 border-b-1">Display block por defecto</h2>
         {{-- Modificar el display por defecto y volverlos inline --}}
-        <p class="bg-red-200 inline">Etiqueta p</p>
-        <div class="bg-red-400 inline">Etiqueta div</div>
-        <blockquote class="bg-red-600 inline">Etiqueta blockquote</blockquote>
+        <p class="bg-red-200">Etiqueta p</p>
+        {{-- Las etiquetas inline no admiten el uso de my --}}
+        <div class="bg-red-400 inline mb-4">Etiqueta div</div>
+        <blockquote class="bg-red-600">Etiqueta blockquote</blockquote>
 
         {{-- Display inline - ocupan el mínimo del ancho disponible --}}
         <h2 class="text-4xl font-bold my-4 border-b-1">Display inline por defecto</h2>
