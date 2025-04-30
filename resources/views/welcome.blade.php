@@ -10,14 +10,39 @@
 </head>
 <body>
     <section class="container py-12">
-        {{-- La clase columns determina como se organiza el contenido dentro de un elemento ideal para blogs --}}
         <article class="columns-3xs gap-4">
-            @foreach ($images as $image)
+            {{-- Recorrer las imagenes traidas desde el controlador --}}
+            @forelse ($images as $image)
                 <figure>
-                    <img src="{{ asset('storage/'.$image) }}">
+                    <img src="{{ asset('storage/' . $image) }}">
                 </figure>
-            @endforeach
+            @empty
+                {{-- En caso de no existir imagenes se coloca texto --}}
+                @forelse ($content as $parrafo)
+                    <p>{{ $parrafo }}</p>
+                @empty
+                    {{-- En caso de no existir texto se da un mensaje de error personalizado --}}
+                    <div class="p-4 mb-4 text-2xl text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                        role="alert">
+                        <span class="font-medium">Error.</span> No existe contenido a mostrar
+                    </div>
+                @endforelse
+            @endforelse
         </article>
     </section>
+
+    <script>
+        // Remover las clases columns-3xs y gap del article en caso de que se lance el alert
+        document.addEventListener('DOMContentLoaded', (e) => {
+            const alert = document.querySelector('.container div[role="alert"]');
+
+            if(alert !== null)
+            {
+                const article = document.querySelector('.container article');
+
+                article.classList.remove('columns-3xs', 'gap-4');
+            }
+        });
+    </script>
 </body>
 </html>
