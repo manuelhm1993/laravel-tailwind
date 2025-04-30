@@ -9,19 +9,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    {{-- A diferencia de bootstrap en tailwind no es obligatorio un container para usar el grid --}}
-    <section class="container">
-        {{-- Hacer que fluyan las columnas a través de las filas, cambiar la distribución horizonal a vertical --}}
-        <div class="grid grid-flow-col grid-rows-3 grid-cols-3 gap-4 mt-4">
-            <article class="bg-blue-100 text-gray-950 text-center py-3 rounded-xl">Artículo 1</article>
-            <article class="bg-blue-200 text-gray-950 text-center py-3 rounded-xl">Artículo 2</article>
-            <article class="bg-blue-300 text-gray-950 text-center py-3 rounded-xl">Artículo 3</article>
-            <article class="bg-blue-400 text-gray-950 text-center py-3 rounded-xl">Artículo 4</article>
-            <article class="bg-blue-500 text-white text-center py-3 rounded-xl">Artículo 5</article>
-            <article class="bg-blue-600 text-white text-center py-3 rounded-xl">Artículo 6</article>
-            <article class="bg-blue-700 text-white text-center py-3 rounded-xl">Artículo 7</article>
-            <article class="bg-blue-800 text-white text-center py-3 rounded-xl">Artículo 8</article>
-            <article class="bg-blue-900 text-white text-center py-3 rounded-xl">Artículo 9</article>
+    <section class="container py-12">
+        <div class="grid grid-cols-3 gap-6">
+            <div class="col-span-2">
+                {{-- Se copió el iframe de un video de youtube, esto se logra con compartir/insertar --}}
+
+                {{-- Se eliminaron el alto y ancho fijos y se le dió un ancho 100% y aspect-video para que se vea bien --}}
+                <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/hQps7n-o5n8?si=_7HWKsg4GixOAipL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-span-1 bg-blue-200">
+
+            </div>
         </div>
     </section>
 </body>
