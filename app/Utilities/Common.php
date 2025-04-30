@@ -4,10 +4,10 @@ namespace App\Utilities;
 
 class Common
 {
-    public static function validateMontserratType(string $montserrat): string
+    public static function validateMontserratTypeOld(string $montserrat): string
     {
         // Lookup table o mapeo de búsqueda, esto sustituye al switch - (Sintaxis básica)
-        /*$map = [
+        $map = [
             'font-thin'      => 'Montserrat fina',
             'font-regular'   => 'Montserrat regular',
             'font-bold'      => 'Montserrat negrita',
@@ -15,8 +15,11 @@ class Common
             'font-black'     => 'Montserrat súper negrita',
         ];
 
-        return $map[$montserrat] ?? 'La fuente no es Montserrat';*/
+        return $map[$montserrat] ?? 'La fuente no es Montserrat';
+    }
 
+    public static function validateMontserratType(string $montserrat): string
+    {
         // Lookup sintaxis inline
         $lookup = [
             'font-thin'      => 'Montserrat fina',
@@ -24,7 +27,8 @@ class Common
             'font-bold'      => 'Montserrat negrita',
             'font-extrabold' => 'Montserrat muy negrita',
             'font-black'     => 'Montserrat súper negrita',
-        ][$montserrat] ?? 'La fuente no es Montserrat';
+        ]
+        [$montserrat] ?? 'La fuente no es Montserrat';
 
         return $lookup;
     }
