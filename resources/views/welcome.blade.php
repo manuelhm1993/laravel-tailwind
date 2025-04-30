@@ -10,40 +10,16 @@
 </head>
 <body>
     <section class="container py-12">
-        <article class="columns-2">
-            {{-- Recorrer las imagenes traidas desde el controlador --}}
-            @forelse ($images as $image)
-                <figure>
-                    <img src="{{ asset('storage/' . $image) }}">
-                </figure>
-            @empty
-                {{-- En caso de no existir imagenes se coloca texto --}}
-                @forelse ($content as $class => $parrafo)
-                    {{-- Colocar un punto de quiebre a partir del segundo párrafo --}}
-                    <p class="{{ ($class === 'bg-blue-200') ? "{$class} break-before-column" : $class }}">{{ $parrafo }}</p>
-                @empty
-                    {{-- En caso de no existir texto se da un mensaje de error personalizado --}}
-                    <div class="p-4 mb-4 text-2xl text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-                        role="alert">
-                        <span class="font-medium">Error.</span> No existe contenido a mostrar
-                    </div>
-                @endforelse
-            @endforelse
-        </article>
+        {{-- Display block - ocupan el máximo del ancho disponible --}}
+        <h2 class="text-4xl font-bold mb-4 border-b-1">Display block por defecto</h2>
+        <p class="bg-red-200">Etiqueta p</p>
+        <div class="bg-red-400">Etiqueta div</div>
+        <blockquote class="bg-red-600">Etiqueta blockquote</blockquote>
+
+        {{-- Display inline - ocupan el mínimo del ancho disponible --}}
+        <h2 class="text-4xl font-bold my-4 border-b-1">Display inline por defecto</h2>
+        <span class="bg-blue-200">Etiqueta span</span>
+        <a class="bg-blue-400" href="#">Etiqueta a</a>
     </section>
-
-    <script>
-        // Remover las clases columns-2 y gap del article en caso de que se lance el alert
-        document.addEventListener('DOMContentLoaded', (e) => {
-            const alert = document.querySelector('.container div[role="alert"]');
-
-            if(alert !== null)
-            {
-                const article = document.querySelector('.container article');
-
-                article.classList.remove('columns-2');
-            }
-        });
-    </script>
 </body>
 </html>
