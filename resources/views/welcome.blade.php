@@ -10,9 +10,12 @@
 </head>
 <body>
     {{-- Se recomienda sustituir el space-y-4 en elementos grandes por flex flex-col gap-4 en la v4 --}}
-    <section class="container py-12 space-y-4">
+    <section class="container py-12 flex flex-col gap-4">
         @forelse ($content as $classes => $parrafo)
-            <h2 class="font-montserrat font-bold text-2xl">{{ App\Utilities\Common::validateMontserratType(str($classes)->split('/ /')[1]) }}</h2>
+            <h2 class="font-montserrat font-bold text-2xl">
+                {{-- Enviar la segunda clase para validarla --}}
+                {{ App\Utilities\Common::validateMontserratType(explode(' ', $classes)[1] ?? '') }}
+            </h2>
             <p class="{{ $classes }}">{{ $parrafo }}</p>
         @empty
             <h1 class="h1 font-bold">Sin contenido</h1>
