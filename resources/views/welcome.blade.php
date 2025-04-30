@@ -14,7 +14,8 @@
         {{-- La clase text-x permite alinear el texto de un contenedor --}}
         <h1 class="h1 font-montserrat font-bold text-left md:text-center lg:text-right">Listas ordenadas</h1>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio consequuntur minus, harum aliquid amet distinctio laborum accusantium doloribus cupiditate autem soluta magni eos sed ipsam quidem suscipit ea dolore?</p>
+        {{-- Manipulación de colores --}}
+        <p class="text-red-700">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio consequuntur minus, harum aliquid amet distinctio laborum accusantium doloribus cupiditate autem soluta magni eos sed ipsam quidem suscipit ea dolore?</p>
 
         {{-- Manipulación de los estilos de la lista --}}
         <ol class="list-decimal md:list-disc list-inside">
