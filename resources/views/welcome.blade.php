@@ -11,14 +11,14 @@
 <body>
     {{-- Se recomienda sustituir el space-y-4 en elementos grandes por flex flex-col gap-4 en la v4 --}}
     <section class="container py-12 flex flex-col gap-4">
-        <h1 class="h1 font-montserrat font-bold">Listas desordenadas</h1>
+        <h1 class="h1 font-montserrat font-bold">Listas ordenadas</h1>
 
         {{-- Manipulación de los estilos de la lista --}}
-        <ul class="list-disc px-5">
+        <ol class="list-decimal px-5">
             @foreach ($content as $parrafo)
                 <li>{{ $parrafo }}</li>
             @endforeach
-        </ul>
+        </ol>
     </section>
 </body>
 </html>
