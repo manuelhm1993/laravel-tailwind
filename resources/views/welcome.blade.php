@@ -10,23 +10,40 @@
 </head>
 <body>
     <section class="container py-12">
-        <div class="grid grid-cols-3 gap-6">
-            <div class="col-span-2">
-                {{-- Se copió el iframe de un video de youtube, esto se logra con compartir/insertar --}}
-
-                {{-- Se eliminaron el alto y ancho fijos y se le dió un ancho 100% y aspect-video para que se vea bien --}}
-                {{-- object-cover se aplica para que el iframe cubra todo el contenedor sin deformarse --}}
-                <iframe class="w-full aspect-video object-cover object-center" src="https://www.youtube.com/embed/hQps7n-o5n8?si=_7HWKsg4GixOAipL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                <div class="bg-red-400 aspect-2/1">
-
-                </div>
-            </div>
-
-            <div class="col-span-1 bg-blue-200">
-
-            </div>
-        </div>
+        <article class="columns-2">
+            {{-- Recorrer las imagenes traidas desde el controlador --}}
+            @forelse ($images as $image)
+                <figure>
+                    <img src="{{ asset('storage/' . $image) }}">
+                </figure>
+            @empty
+                {{-- En caso de no existir imagenes se coloca texto --}}
+                @forelse ($content as $class => $parrafo)
+                    {{-- Colocar un punto de quiebre a partir del segundo párrafo --}}
+                    <p class="{{ ($class === 'bg-blue-200') ? "{$class} break-before-column" : $class }}">{{ $parrafo }}</p>
+                @empty
+                    {{-- En caso de no existir texto se da un mensaje de error personalizado --}}
+                    <div class="p-4 mb-4 text-2xl text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                        role="alert">
+                        <span class="font-medium">Error.</span> No existe contenido a mostrar
+                    </div>
+                @endforelse
+            @endforelse
+        </article>
     </section>
+
+    <script>
+        // Remover las clases columns-2 y gap del article en caso de que se lance el alert
+        document.addEventListener('DOMContentLoaded', (e) => {
+            const alert = document.querySelector('.container div[role="alert"]');
+
+            if(alert !== null)
+            {
+                const article = document.querySelector('.container article');
+
+                article.classList.remove('columns-2');
+            }
+        });
+    </script>
 </body>
 </html>
