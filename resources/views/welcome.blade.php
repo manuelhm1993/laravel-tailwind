@@ -11,12 +11,13 @@
 <body>
     {{-- Se recomienda sustituir el space-y-4 en elementos grandes por flex flex-col gap-4 en la v4 --}}
     <section class="container py-12 flex flex-col gap-4">
-        <h1 class="h1 font-montserrat font-bold">Listas ordenadas</h1>
+        {{-- La clase text-x permite alinear el texto de un contenedor --}}
+        <h1 class="h1 font-montserrat font-bold text-left md:text-center lg:text-right">Listas ordenadas</h1>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio consequuntur minus, harum aliquid amet distinctio laborum accusantium doloribus cupiditate autem soluta magni eos sed ipsam quidem suscipit ea dolore?</p>
 
         {{-- Manipulación de los estilos de la lista --}}
-        <ol class="list-decimal list-inside">
+        <ol class="list-decimal md:list-disc list-inside">
             @foreach ($content as $parrafo)
                 <li>{{ $parrafo }}</li>
             @endforeach
