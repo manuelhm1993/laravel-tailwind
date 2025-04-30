@@ -14,8 +14,8 @@
         <h2 class="text-4xl font-bold mb-4 border-b-1">Display block por defecto</h2>
         {{-- Modificar el display por defecto y volverlos inline --}}
         <p class="bg-red-200">Etiqueta p</p>
-        {{-- Las etiquetas inline no admiten el uso de my --}}
-        <div class="bg-red-400 inline mb-4">Etiqueta div</div>
+        {{-- Las etiquetas inline no admiten el uso de my, pero el inline-block es una combinación de ambas --}}
+        <div class="bg-red-400 inline-block my-4 p-3 uppercase font-bold">Etiqueta div</div>
         <blockquote class="bg-red-600">Etiqueta blockquote</blockquote>
 
         {{-- Display inline - ocupan el mínimo del ancho disponible --}}
