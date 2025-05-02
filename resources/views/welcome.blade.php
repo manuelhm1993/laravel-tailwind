@@ -12,8 +12,8 @@
         /* Clase personalizada para obtener una img por background */
         .imagen {
             background-image: url("{{ asset('storage/img/pexels-thngocbich-1714341.jpg') }}");
-            height: 400px;
-            width: 400px;
+            height: 500px;
+            width: 500px;
             margin: 0 auto;
         }
     </style>
@@ -25,8 +25,8 @@
         <p>{{ $content[key($content)] }}</p>
 
         {{-- Obligar a la imagen a adaptarse a las dimensiones del contenedor --}}
-        <figure class="imagen bg-contain">
-
+        <figure class="imagen bg-no-repeat border-4 border-blue-600 bg-cover">
+            {{-- Se agregaron border para poder apreciar que el contenedor aún tiene 500x500 y no se llena la altura --}}
         </figure>
     </section>
 </body>
