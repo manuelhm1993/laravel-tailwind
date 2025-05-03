@@ -25,7 +25,7 @@
         <p>{{ $content[key($content)] }}</p>
 
         {{-- Obligar a la imagen a adaptarse a las dimensiones del contenedor --}}
-        <figure class="imagen border-8 border-blue-600 border-dashed bg-cover bg-center bg-clip-padding">
+        <figure class="imagen border-8 border-blue-600 border-dashed bg-cover bg-center bg-clip-content p-4">
             {{-- Al usar bg-cover no es necesario indicar que la imagen no se repita --}}
         </figure>
     </section>
