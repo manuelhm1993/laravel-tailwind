@@ -10,8 +10,10 @@
 </head>
 <body>
     <section class="container">
-        {{-- En la versión 4 de tailwind opacity quedó deprecado, en su reemplazo se usan modificadores /25 --}}
-        <div class="bg-blue-700/25 h-12"></div>
+        {{-- Trabajo con gradientes, se indica a qué posición va, el color inicial, el color de paso y el color final --}}
+        <div class="bg-gradient-to-r from-blue-500 via-green-600 to-yellow-400>
+            Hola mundo
+        </div>
     </section>
 </body>
 </html>
