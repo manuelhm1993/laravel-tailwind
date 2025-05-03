@@ -7,27 +7,11 @@
     <title>Laravel - Tailwindcss</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    <style>
-        /* Clase personalizada para obtener una img por background */
-        .imagen {
-            background-image: url("{{ asset('storage/img/pexels-fotios-photos-16129705.jpg') }}");
-            height: 400px;
-            width: 900px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
     <section class="container">
-        <h1 class="h1 font-bold text-center my-3">Backgrounds</h1>
-
-        <p>{{ $content[key($content)] }}</p>
-        <figure class="imagen bg-contain bg-center bg-no-repeat bg-fixed"></figure>
-        
-        @foreach ($content as $text)
-            <p>{{ $text }}</p>
-        @endforeach
+        {{-- En la versión 4 de tailwind opacity quedó deprecado, en su reemplazo se usan modificadores /25 --}}
+        <div class="bg-blue-700/25 h-12"></div>
     </section>
 </body>
 </html>
