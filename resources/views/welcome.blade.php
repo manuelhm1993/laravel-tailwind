@@ -12,7 +12,7 @@
     <section class="container py-5">
         <div class="flex flex-col gap-4">
             <h1>Borders</h1>
-            <div class="w-64 h-64 bg-gray-500 border border-blue-800">
+            <div class="w-64 h-64 bg-gray-500 border-8 border-blue-800">
             </div>
         </div>
     </section>
