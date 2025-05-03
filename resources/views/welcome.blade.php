@@ -11,7 +11,7 @@
 <body>
     <section class="container">
         {{-- Trabajo con gradientes, se indica a qué posición va, el color inicial, el color de paso y el color final --}}
-        <div class="bg-gradient-to-r from-blue-500 via-green-600 to-yellow-400>
+        <div class="bg-gradient-to-r from-blue-500 via-green-600 to-yellow-400 text-center font-extrabold text-5xl bg-clip-text text-transparent">
             Hola mundo
         </div>
     </section>
