@@ -9,20 +9,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    {{-- Se recomienda sustituir el space-y-4 en elementos grandes por flex flex-col gap-4 en la v4 --}}
-    <section class="container py-12 flex flex-col gap-4">
-        {{-- La clase text-x permite alinear el texto de un contenedor --}}
-        <h1 class="h1 font-montserrat font-bold text-left md:text-center lg:text-right uppercase">Listas ordenadas</h1>
-
-        {{-- Manipulación de colores --}}
-        <p class="text-red-700 hover:text-blue-700 hover:no-underline line-through">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil odio consequuntur minus, harum aliquid amet distinctio laborum accusantium doloribus cupiditate autem soluta magni eos sed ipsam quidem suscipit ea dolore?</p>
-
-        {{-- Manipulación de los estilos de la lista --}}
-        <ol class="list-decimal md:list-disc list-inside">
-            @foreach ($content as $parrafo)
-                <li>{{ $parrafo }}</li>
-            @endforeach
-        </ol>
+    <section class="container">
+        {{-- Trabajo con gradientes, se indica a qué posición va, el color inicial, el color de paso y el color final --}}
+        <div class="bg-gradient-to-r from-blue-500 via-green-600 to-yellow-400 text-center font-extrabold text-5xl bg-clip-text text-transparent">
+            Hola mundo
+        </div>
     </section>
 </body>
 </html>
