@@ -15,16 +15,21 @@ class HomeController extends Controller
     {
         // Devuelve todos los archivos de un directorio
         $images = Storage::files('img');
-
-        // Contenido de prueba
-        $content = [
-            'font-montserrat font-thin' => fake()->paragraph(random_int(5, 15)),
-            'font-montserrat font-regular' => fake()->paragraph(random_int(5, 15)),
-            'font-montserrat font-bold' => fake()->paragraph(random_int(5, 15)),
-            'font-montserrat font-extrabold' => fake()->paragraph(random_int(5, 15)),
-            'font-montserrat font-black' => fake()->paragraph(random_int(5, 15))
-        ];
+        $content = $this->getContent(10);
         
         return view('welcome', compact('images', 'content'));
+    }
+
+    // Contenido de prueba
+    private function getContent(int $parrafos = 5, $min = 10, $max = 25): array
+    {
+        $content = [];
+
+        for($i = 0; $i < $parrafos; $i++)
+        {
+            $content[$i] = fake()->paragraph(random_int($min, $max));
+        }
+
+        return $content;
     }
 }

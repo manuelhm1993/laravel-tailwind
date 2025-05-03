@@ -12,8 +12,8 @@
         /* Clase personalizada para obtener una img por background */
         .imagen {
             background-image: url("{{ asset('storage/img/pexels-fotios-photos-16129705.jpg') }}");
-            height: 500px;
-            width: 500px;
+            height: 400px;
+            width: 900px;
             margin: 0 auto;
         }
     </style>
@@ -23,11 +23,11 @@
         <h1 class="h1 font-bold text-center my-3">Backgrounds</h1>
 
         <p>{{ $content[key($content)] }}</p>
-
-        {{-- Obligar a la imagen a adaptarse a las dimensiones del contenedor --}}
-        <figure class="imagen border-8 border-blue-600 border-dashed bg-cover bg-center bg-clip-content p-4">
-            {{-- Al usar bg-cover no es necesario indicar que la imagen no se repita --}}
-        </figure>
+        <figure class="imagen bg-contain bg-center bg-no-repeat bg-fixed"></figure>
+        
+        @foreach ($content as $text)
+            <p>{{ $text }}</p>
+        @endforeach
     </section>
 </body>
 </html>
