@@ -15,10 +15,11 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            <div class="bg-gray-300">
-                <figure>
-                    <img src="https://cdn.pixabay.com/photo/2022/01/06/07/25/south-korea-6918828_960_720.jpg" class="w-full h-64 object-none" alt="Sin imagen">
-                </figure>
+            {{-- Si el contenido desborda el contenedor, entonces se usa overflow-hidden para ocultarlo --}}
+            <div class="bg-gray-300 p-4 h-64 overflow-hidden">
+                @foreach ($content as $item)
+                    <p>{{ $item }}</p>
+                @endforeach
             </div>
         </div>
     </section>
