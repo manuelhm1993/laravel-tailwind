@@ -9,23 +9,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+    {{-- Barra de navegación --}}
+    <nav class="bg-blue-300 h-16 w-full fixed"></nav>
+
     {{-- Contenedor principal --}}
-    <section class="container py-4">
+    <section class="container pt-16 pb-4">
         {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            {{-- Posicionamientos --}}
-            <div class="bg-gray-300 p-4 relative">
-                {{-- Relativo, permite controlar los positions absolute y no afecta al resto de elementos --}}
-                <div class="bg-gray-400 p-4 relative">
-                    <div class="bg-blue-400 p-4">
-                    </div>
-                    {{-- Saca a la caja del flujo normal y lo posiciona respecto a su contenedor relativo más cercano o el body --}}
-                    <div class="bg-blue-600 p-4 absolute inset-x-0 bottom-0">
-                    </div>
-                </div>
-            </div>
+            @foreach ($content as $item)
+                <p>{{ $item }}</p>
+            @endforeach
         </div>
     </section>
 </body>
