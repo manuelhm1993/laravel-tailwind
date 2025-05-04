@@ -15,37 +15,14 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            {{-- TailwindCSS por defecto usa box-sizing: border-box; esto puede ser modificado --}}
-            <div class="bg-gray-300 w-64 h-32 p-8 border-8 border-gray-500 box-content">
-                <div class="bg-gray-500 w-full h-full">
-
-                </div>
+            {{-- Para cortar el efecto de flex se encierra el contenido dentro de un div --}}
+            <div>
+                {{-- Display inline --}}
+                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline">1</div>
+                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline">2</div>
+                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline">3</div>
             </div>
-
-            <button type="button" id="switch" class="btn btn-blue w-xs">Switch</button>
         </div>
     </section>
-
-    <script>
-        document.addEventListener('click', (e) => {
-            const target = e.target;
-
-            if(target.id === 'switch')
-            {
-                const content = document.querySelector('.container h1~div');
-
-                if(content.classList.contains('box-content'))
-                {
-                    content.classList.remove('box-content');
-                    content.classList.add('box-border');
-                }
-                else 
-                {
-                    content.classList.remove('box-border');
-                    content.classList.add('box-content');
-                }
-            }
-        });
-    </script>
 </body>
 </html>
