@@ -11,30 +11,37 @@
 <body>
     {{-- Contenedor principal --}}
     <section class="container py-5">
-        {{-- Alinear el contenido verticalmente con una separación de 1rem = 16px --}}
+        {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
         <div class="flex flex-col gap-4">
-            <h1>Borders</h1>
-            
-            {{-- Centrar texto verticalmente dentro de un div: flex items-center justify-center --}}
-            <div class="w-64 h-32 bg-gray-500 text-white text-4xl flex items-center justify-center border-8 border-blue-800 border-double rounded-full">
-                MH
-            </div>
-
-            {{-- Agregar bordes inferiores sin tener que colocarlos en cada párrafo --}}
-            <article class="divide-y-8 divide-gray-600 divide-dashed border-b-8 border-gray-600 border-dashed text-justify">
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
-            </article>
-
-            {{-- Simular una barra de navegación --}}
-            <nav class="divide-x-2 divide-blue-600">
-                <a href="" class="p-4">Link 1</a>
-                <a href="" class="p-4">Link 2</a>
-                <a href="" class="p-4">Link 3</a>
-                <a href="" class="p-4">Link 4</a>
-                <a href="" class="p-4">Link 5</a>
-            </nav>
+            <h1>Tablas</h1>
+            {{-- A diferencia de bootstrap, tailwind no impone un diseño predefinido, se debe hacer el diseño de la tabla y luego crear la clase table con @apply --}}
+            <table class="table border-separate md:border-collapse table-fixed">
+                <thead>
+                    <tr>
+                        {{-- Fijar el tamaño de las columnas, la tabla debe tener la clase table-fixed --}}
+                        <th class="w-1/4">País</th>
+                        <th class="w-1/4">Ciudad</th>
+                        <th class="w-1/2">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Venezuela</td>
+                        <td>Maracaibo</td>
+                        <td>{{ $content[0] }}</td>
+                    </tr>
+                    <tr>
+                        <td>Colombia</td>
+                        <td>Bogotá</td>
+                        <td>{{ $content[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>España</td>
+                        <td>Madrid</td>
+                        <td>{{ $content[2] }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </body>
