@@ -15,11 +15,15 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            {{-- Si el contenido desborda el contenedor, entonces se usa overflow-hidden para ocultar el sobrante --}}
-            <div class="bg-gray-300 p-4 h-64 overflow-y-scroll">
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
+            {{-- Posicionamientos --}}
+            <div class="bg-gray-300 p-4">
+                <div class="bg-gray-400 p-4">
+                    <div class="bg-blue-400 p-4">
+                    </div>
+                    {{-- Saca a la caja del flujo normal y lo posiciona respecto a su contenedor relativo más cercano o el body --}}
+                    <div class="bg-blue-600 p-4 absolute right-0 top-0">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
