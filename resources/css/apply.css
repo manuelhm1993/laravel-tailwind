@@ -1,6 +1,6 @@
-.h1 {
+h1 {
     /* Permite crear clases personalizadas aplicando estilos tailwind para no repetirlos */
-    @apply text-6xl md:text-4xl;
+    @apply text-4xl font-bold;
 }
 
 p {
