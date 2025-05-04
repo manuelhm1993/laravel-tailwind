@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel - Tailwindcss</title>
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    @livewireStyles
-</head>
-<body>
-    {{-- Contenedor principal --}}
-    <section class="container py-4">
-        
-    </section>
-
-    @livewireScripts
-</body>
-</html>
+<x-layouts.app>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae nobis nemo eum illum. Minus neque, in accusantium temporibus sapiente facilis quaerat, architecto ut doloremque similique, fugit esse id iste delectus.</p>
+</x-layouts.app>
