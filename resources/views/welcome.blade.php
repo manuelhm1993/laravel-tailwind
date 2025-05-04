@@ -16,13 +16,15 @@
             <h1>Layout</h1>
 
             {{-- Contenedor flex, todas las cajas deben ir dentro de un contenedor --}}
-            <div class="bg-gray-300 flex flex-col h-64 justify-around">
+            <div class="bg-gray-300 flex flex-col h-64 justify-center">
                 {{-- 
                     Ejes flex
                         * Eje main-axis: por defecto es flex-row, pero existe flex-col
                             - Row: distribuye las cajas de izquierda a derecha en filas
                             - Col: distribuye las cajas de arriba a abajo en columnas
-                        * Eje cross-axis: 
+                        * Eje cross-axis: es un eje perpendicular al main-axis
+                            - Si el eje main-axis es horizontal, el eje cross-axis será vertical
+                            - El eje cross-axis establece que se ocupe todo el espacio posible
                 --}}
                 <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2">1</div>
                 <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2">2</div>
