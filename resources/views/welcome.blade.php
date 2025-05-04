@@ -9,18 +9,19 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    {{-- Contenedor principal --}}
-    <section class="container py-5">
-        {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
-        <div class="flex flex-col gap-4">
-            <h1>Sizes</h1>
-            
-            <div class="bg-blue-600 h-64">
-                <div class="bg-red-600 h-full w-full max-w-5xl">
-
-                </div>
+    <main class="relative">
+        {{-- Barra de navegación lateral --}}
+        <aside class="h-screen bg-blue-500 w-64 absolute left-0 top-0">
+        </aside>
+        
+        {{-- Contenedor principal --}}
+        <section class="container py-5 ms-64">
+            {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
+            <div class="flex flex-col gap-4">
+                <h1>Sizes</h1>
+        
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>
