@@ -12,10 +12,6 @@ ul {
     @apply text-sm italic;
 }
 
-.table {
-    @apply border-collapse border border-gray-500;
-}
-
 /* Aplicar el estilo solo a los impares: odd = 2n+1 */
 .table tbody tr:nth-child(odd) {
     @apply bg-gray-200;
