@@ -11,31 +11,30 @@
 <body>
     {{-- Contenedor principal --}}
     <section class="container py-5">
-        {{-- Alinear el contenido verticalmente con una separación de 1rem = 16px --}}
-        <div class="flex flex-col gap-4">
-            <h1>Borders</h1>
-            
-            {{-- Centrar texto verticalmente dentro de un div: flex items-center justify-center --}}
-            <div class="w-64 h-32 bg-gray-500 text-white text-4xl flex items-center justify-center border-8 border-blue-800 border-double rounded-full">
-                MH
-            </div>
+        {{-- A diferencia de bootstrap, tailwind no impone un diseño predefinido, se debe hacer el diseño de la tabla y luego crear la clase table con @apply --}}
+        <table class="border-collapse border border-gray-500">
+            <thead>
+                <tr>
+                    <th class="border border-gray-400 px-4 py-2 text-gray-800">País</th>
+                    <th class="border border-gray-400 px-4 py-2 text-gray-800">Ciudad</th>
+                </tr>
+            </thead>
 
-            {{-- Agregar bordes inferiores sin tener que colocarlos en cada párrafo --}}
-            <article class="divide-y-8 divide-gray-600 divide-dashed border-b-8 border-gray-600 border-dashed text-justify">
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
-            </article>
-
-            {{-- Simular una barra de navegación --}}
-            <nav class="divide-x-2 divide-blue-600">
-                <a href="" class="p-4">Link 1</a>
-                <a href="" class="p-4">Link 2</a>
-                <a href="" class="p-4">Link 3</a>
-                <a href="" class="p-4">Link 4</a>
-                <a href="" class="p-4">Link 5</a>
-            </nav>
-        </div>
+            <tbody>
+                <tr class="bg-gray-200">
+                    <td class="border border-gray-400 px-4 py-2">Venezuela</td>
+                    <td class="border border-gray-400 px-4 py-2">Maracaibo</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-400 px-4 py-2">Colombia</td>
+                    <td class="border border-gray-400 px-4 py-2">Bogotá</td>
+                </tr>
+                <tr class="bg-gray-200">
+                    <td class="border border-gray-400 px-4 py-2">España</td>
+                    <td class="border border-gray-400 px-4 py-2">Madrid</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 </body>
 </html>
