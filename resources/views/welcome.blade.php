@@ -15,20 +15,11 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            <div>
-                <figure class="float-right">
-                    <img src="https://images.pexels.com/photos/31571137/pexels-photo-31571137/free-photo-of-paisaje-urbano-en-blanco-y-negro-en-portland-oregon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sin imagen">
+            <div class="bg-gray-300">
+                <figure>
+                    {{-- Uso de object para redimensionar imágenes --}}
+                    <img src="https://cdn.pixabay.com/photo/2022/01/06/07/25/south-korea-6918828_960_720.jpg" class="w-full h-64 object-cover" alt="Sin imagen">
                 </figure>
-
-                {{-- El float left todavía puede ser aplicado --}}
-                <figure class="w-2xl float-left">
-                    <img src="https://images.pexels.com/photos/30007522/pexels-photo-30007522/free-photo-of-intrincada-escalera-de-caracol-en-el-faro.jpeg" alt="Sin imagen">
-                </figure>
-
-                @foreach ($content as $key => $item)
-                    {{-- Cortar el efecto de float --}}
-                    <p class="mb-2 {{ ($key === 0) ? 'clear-both' : '' }}">{{ $item }}</p>
-                @endforeach
             </div>
         </div>
     </section>
