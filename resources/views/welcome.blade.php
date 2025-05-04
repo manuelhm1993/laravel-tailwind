@@ -15,20 +15,12 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            @for ($i = 0; $i < 3; $i++)
-                {{-- Sticky es un posicionamiento para menús pegajosos --}}
-                <h2 class="bg-gray-300 text-gray-700 text-3xl font-bold sticky top-0">Título {{ $i + 1 }}</h2>
-
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
-            @endfor
-
-            @for ($i = 0; $i < 7; $i++)
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
-            @endfor
+            {{-- Flexbox es una clase css que permite posicionar fácilmente las cajas si están dentro de un contenedor flex --}}
+            <div class="bg-gray-300 flex">
+                <div class="bg-gray-400 text-gray-700 p-2 m-2">1</div>
+                <div class="bg-gray-400 text-gray-700 p-2 m-2">2</div>
+                <div class="bg-gray-400 text-gray-700 p-2 m-2">3</div>
+            </div>
         </div>
     </section>
 </body>
