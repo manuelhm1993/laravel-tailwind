@@ -15,20 +15,23 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            @for ($i = 0; $i < 3; $i++)
-                {{-- Sticky es un posicionamiento para menús pegajosos --}}
-                <h2 class="bg-gray-300 text-gray-700 text-3xl font-bold sticky top-0">Título {{ $i + 1 }}</h2>
-
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
-            @endfor
-
-            @for ($i = 0; $i < 7; $i++)
-                @foreach ($content as $item)
-                    <p>{{ $item }}</p>
-                @endforeach
-            @endfor
+            {{-- Contenedor flex, todas las cajas deben ir dentro de un contenedor --}}
+            <div class="bg-gray-300 flex">
+                {{-- 
+                    Ejes flex
+                        * Eje main-axis: por defecto es flex-row, pero existe flex-col
+                            - Row: distribuye las cajas de izquierda a derecha en filas
+                            - Col: distribuye las cajas de arriba a abajo en columnas
+                            - Clases: justify
+                        * Eje cross-axis: por defecto es items-strech, es un eje perpendicular al main-axis
+                            - Si el eje main-axis es horizontal, el eje cross-axis será vertical
+                            - El eje cross-axis establece que se ocupe todo el espacio posible
+                            - Clases: items
+                --}}
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 flex-1 order-2">1</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 flex-1 order-1">2</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 flex-1 order-3">3</div>
+            </div>
         </div>
     </section>
 </body>
