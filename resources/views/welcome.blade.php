@@ -21,7 +21,31 @@
 
                 </div>
             </div>
+
+            <button type="button" id="switch" class="btn btn-blue w-xs">Switch</button>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('click', (e) => {
+            const target = e.target;
+
+            if(target.id === 'switch')
+            {
+                const content = document.querySelector('.container h1~div');
+
+                if(content.classList.contains('box-content'))
+                {
+                    content.classList.remove('box-content');
+                    content.classList.add('box-border');
+                }
+                else 
+                {
+                    content.classList.remove('box-border');
+                    content.classList.add('box-content');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
