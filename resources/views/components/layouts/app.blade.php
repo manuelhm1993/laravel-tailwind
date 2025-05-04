@@ -13,7 +13,7 @@
 <body>
     {{-- Contenedor principal --}}
     <section class="container py-4">
-        
+        {{ $slot }}
     </section>
 
     @livewireScripts
