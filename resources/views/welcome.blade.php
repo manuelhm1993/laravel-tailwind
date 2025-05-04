@@ -17,8 +17,7 @@
 
             <div class="bg-gray-300">
                 <figure>
-                    {{-- Uso de object para redimensionar imágenes --}}
-                    <img src="https://cdn.pixabay.com/photo/2022/01/06/07/25/south-korea-6918828_960_720.jpg" class="w-full h-64 object-cover object-bottom" alt="Sin imagen">
+                    <img src="https://cdn.pixabay.com/photo/2022/01/06/07/25/south-korea-6918828_960_720.jpg" class="w-full h-64 object-none" alt="Sin imagen">
                 </figure>
             </div>
         </div>
