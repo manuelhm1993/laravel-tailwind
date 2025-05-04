@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         // Devuelve todos los archivos de un directorio
         $images = Storage::files('img');
-        $content = $this->getContent(16);
+        $content = $this->getContent(4);
         
         return view('welcome', compact('images', 'content'));
     }
