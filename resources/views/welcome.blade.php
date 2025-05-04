@@ -15,23 +15,23 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th class="th">País</th>
-                    <th class="th">Ciudad</th>
+                    <th>País</th>
+                    <th>Ciudad</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr class="tr">
-                    <td class="td">Venezuela</td>
-                    <td class="td">Maracaibo</td>
+                <tr>
+                    <td>Venezuela</td>
+                    <td>Maracaibo</td>
                 </tr>
                 <tr>
-                    <td class="td">Colombia</td>
-                    <td class="td">Bogotá</td>
+                    <td>Colombia</td>
+                    <td>Bogotá</td>
                 </tr>
-                <tr class="tr">
-                    <td class="td">España</td>
-                    <td class="td">Madrid</td>
+                <tr>
+                    <td>España</td>
+                    <td>Madrid</td>
                 </tr>
             </tbody>
         </table>
