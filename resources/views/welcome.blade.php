@@ -21,7 +21,7 @@
                     <div class="bg-blue-400 p-4">
                     </div>
                     {{-- Saca a la caja del flujo normal y lo posiciona respecto a su contenedor relativo más cercano o el body --}}
-                    <div class="bg-blue-600 p-4 absolute right-0 top-0">
+                    <div class="bg-blue-600 p-4 absolute left-0 inset-y-0">
                     </div>
                 </div>
             </div>
