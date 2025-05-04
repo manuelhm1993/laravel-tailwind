@@ -16,7 +16,7 @@
             <h1>Layout</h1>
 
             {{-- Contenedor flex, todas las cajas deben ir dentro de un contenedor --}}
-            <div class="bg-gray-300 flex flex-col h-64 justify-center">
+            <div class="bg-gray-300 flex h-64 justify-center items-center">
                 {{-- 
                     Ejes flex
                         * Eje main-axis: por defecto es flex-row, pero existe flex-col
