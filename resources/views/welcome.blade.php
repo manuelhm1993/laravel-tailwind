@@ -16,8 +16,7 @@
             <h1>Sizes</h1>
             
             <div class="bg-blue-600 h-64">
-                {{-- 100% de la altura del padre y al ser un block ocupa todo el ancho --}}
-                <div class="bg-red-600 h-full w-full md:w-3/4 lg:w-1/2">
+                <div class="bg-red-600 h-full w-full max-w-5xl">
 
                 </div>
             </div>
