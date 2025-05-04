@@ -11,3 +11,19 @@ p {
 ul {
     @apply text-sm italic;
 }
+
+.table {
+    @apply border-collapse border border-gray-500;
+}
+
+.tr {
+    @apply bg-gray-200;
+}
+
+.th {
+    @apply border border-gray-400 px-4 py-2 text-gray-800;
+}
+
+.td {
+    @apply border border-gray-400 px-4 py-2;
+}

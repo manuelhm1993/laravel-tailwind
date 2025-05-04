@@ -12,26 +12,26 @@
     {{-- Contenedor principal --}}
     <section class="container py-5">
         {{-- A diferencia de bootstrap, tailwind no impone un diseño predefinido, se debe hacer el diseño de la tabla y luego crear la clase table con @apply --}}
-        <table class="border-collapse border border-gray-500">
+        <table class="table">
             <thead>
                 <tr>
-                    <th class="border border-gray-400 px-4 py-2 text-gray-800">País</th>
-                    <th class="border border-gray-400 px-4 py-2 text-gray-800">Ciudad</th>
+                    <th class="th">País</th>
+                    <th class="th">Ciudad</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr class="bg-gray-200">
-                    <td class="border border-gray-400 px-4 py-2">Venezuela</td>
-                    <td class="border border-gray-400 px-4 py-2">Maracaibo</td>
+                <tr class="tr">
+                    <td class="td">Venezuela</td>
+                    <td class="td">Maracaibo</td>
                 </tr>
                 <tr>
-                    <td class="border border-gray-400 px-4 py-2">Colombia</td>
-                    <td class="border border-gray-400 px-4 py-2">Bogotá</td>
+                    <td class="td">Colombia</td>
+                    <td class="td">Bogotá</td>
                 </tr>
-                <tr class="bg-gray-200">
-                    <td class="border border-gray-400 px-4 py-2">España</td>
-                    <td class="border border-gray-400 px-4 py-2">Madrid</td>
+                <tr class="tr">
+                    <td class="td">España</td>
+                    <td class="td">Madrid</td>
                 </tr>
             </tbody>
         </table>
