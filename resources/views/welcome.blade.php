@@ -16,12 +16,18 @@
             <h1>Layout</h1>
 
             <div>
+                <figure class="float-right">
+                    <img src="https://images.pexels.com/photos/31571137/pexels-photo-31571137/free-photo-of-paisaje-urbano-en-blanco-y-negro-en-portland-oregon.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sin imagen">
+                </figure>
+
                 {{-- El float left todavía puede ser aplicado --}}
                 <figure class="w-2xl float-left">
                     <img src="https://images.pexels.com/photos/30007522/pexels-photo-30007522/free-photo-of-intrincada-escalera-de-caracol-en-el-faro.jpeg" alt="Sin imagen">
                 </figure>
-                @foreach ($content as $item)
-                    <p class="mb-2">{{ $item }}</p>
+
+                @foreach ($content as $key => $item)
+                    {{-- Cortar el efecto de float --}}
+                    <p class="mb-2 {{ ($key === 0) ? 'clear-both' : '' }}">{{ $item }}</p>
                 @endforeach
             </div>
         </div>
