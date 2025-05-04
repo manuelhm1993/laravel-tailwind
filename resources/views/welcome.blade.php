@@ -10,7 +10,9 @@
 </head>
 <body>
     {{-- Barra de navegación --}}
-    <nav class="bg-blue-300 h-16 w-full fixed"></nav>
+    <nav class="bg-blue-300 h-16 w-full fixed z-50"></nav>
+
+    <aside class="w-64 fixed bg-gray-800 inset-y-0 z-40"></aside>
 
     {{-- Contenedor principal --}}
     <section class="container pt-16 pb-4">
