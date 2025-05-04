@@ -15,25 +15,30 @@
         <div class="flex flex-col gap-4">
             <h1>Tablas</h1>
             {{-- A diferencia de bootstrap, tailwind no impone un diseño predefinido, se debe hacer el diseño de la tabla y luego crear la clase table con @apply --}}
-            <table class="table border-separate md:border-collapse">
+            <table class="table border-separate md:border-collapse table-fixed">
                 <thead>
                     <tr>
-                        <th>País</th>
-                        <th>Ciudad</th>
+                        {{-- Fijar el tamaño de las columnas, la tabla debe tener la clase table-fixed --}}
+                        <th class="w-1/4">País</th>
+                        <th class="w-1/4">Ciudad</th>
+                        <th class="w-1/2">Descripción</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Venezuela</td>
                         <td>Maracaibo</td>
+                        <td>{{ $content[0] }}</td>
                     </tr>
                     <tr>
                         <td>Colombia</td>
                         <td>Bogotá</td>
+                        <td>{{ $content[1] }}</td>
                     </tr>
                     <tr>
                         <td>España</td>
                         <td>Madrid</td>
+                        <td>{{ $content[2] }}</td>
                     </tr>
                 </tbody>
             </table>
