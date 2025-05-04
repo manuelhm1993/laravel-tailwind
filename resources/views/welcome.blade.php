@@ -15,13 +15,14 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            {{-- Para cortar el efecto de flex se encierra el contenido dentro de un div --}}
-            <div class="bg-blue-600">
-                {{-- Display inline-block --}}
-                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline-block">1</div>
-                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 my-2 inline-block">2</div>
-                {{-- La clase hidden permite ocultar elementos --}}
-                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline-block lg:hidden">3</div>
+            <div>
+                {{-- El float left todavía puede ser aplicado --}}
+                <figure class="w-2xl float-left">
+                    <img src="https://images.pexels.com/photos/30007522/pexels-photo-30007522/free-photo-of-intrincada-escalera-de-caracol-en-el-faro.jpeg" alt="Sin imagen">
+                </figure>
+                @foreach ($content as $item)
+                    <p class="mb-2">{{ $item }}</p>
+                @endforeach
             </div>
         </div>
     </section>
