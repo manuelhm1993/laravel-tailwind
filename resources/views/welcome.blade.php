@@ -16,12 +16,13 @@
             <h1>Layout</h1>
 
             {{-- Posicionamientos --}}
-            <div class="bg-gray-300 p-4">
-                <div class="bg-gray-400 p-4">
+            <div class="bg-gray-300 p-4 relative">
+                {{-- Relativo, permite controlar los positions absolute y no afecta al resto de elementos --}}
+                <div class="bg-gray-400 p-4 relative">
                     <div class="bg-blue-400 p-4">
                     </div>
                     {{-- Saca a la caja del flujo normal y lo posiciona respecto a su contenedor relativo más cercano o el body --}}
-                    <div class="bg-blue-600 p-4 absolute left-0 inset-y-0">
+                    <div class="bg-blue-600 p-4 absolute inset-x-0 bottom-0">
                     </div>
                 </div>
             </div>
