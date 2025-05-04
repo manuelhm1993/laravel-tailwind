@@ -9,19 +9,19 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <main class="relative">
-        {{-- Barra de navegación lateral --}}
-        <aside class="h-screen bg-blue-500 w-64 absolute left-0 top-0">
-        </aside>
-        
-        {{-- Contenedor principal --}}
-        <section class="container py-5 ms-64">
-            {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
-            <div class="flex flex-col gap-4">
-                <h1>Sizes</h1>
-        
+    {{-- Contenedor principal --}}
+    <section class="container py-4">
+        {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
+        <div class="flex flex-col gap-4">
+            <h1>Layout</h1>
+    
+            {{-- Al agregar padding, eso se suma al contenedor, a no ser que se use box-sizing: border-box; --}}
+            <div class="bg-gray-300 w-64 h-32 p-8">
+                <div class="bg-gray-500 w-full h-full">
+
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 </body>
 </html>
