@@ -15,8 +15,8 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            {{-- Si el contenido desborda el contenedor, entonces se usa overflow-hidden para ocultarlo --}}
-            <div class="bg-gray-300 p-4 h-64 overflow-hidden">
+            {{-- Si el contenido desborda el contenedor, entonces se usa overflow-hidden para ocultar el sobrante --}}
+            <div class="bg-gray-300 p-4 h-64 overflow-y-scroll">
                 @foreach ($content as $item)
                     <p>{{ $item }}</p>
                 @endforeach
