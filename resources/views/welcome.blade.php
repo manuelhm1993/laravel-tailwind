@@ -14,9 +14,9 @@
         {{-- Alinear verticalmente el contenido del div y darle separación de 16px = 1rem --}}
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
-    
-            {{-- Al agregar padding, eso se suma al contenedor, a no ser que se use box-sizing: border-box; --}}
-            <div class="bg-gray-300 w-64 h-32 p-8">
+
+            {{-- TailwindCSS por defecto usa box-sizing: border-box; esto puede ser modificado --}}
+            <div class="bg-gray-300 w-64 h-32 p-8 border-8 border-gray-500 box-content">
                 <div class="bg-gray-500 w-full h-full">
 
                 </div>
