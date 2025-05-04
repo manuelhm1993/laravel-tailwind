@@ -15,11 +15,18 @@
         <div class="flex flex-col gap-4">
             <h1>Layout</h1>
 
-            {{-- Flexbox es una clase css que permite posicionar fácilmente las cajas si están dentro de un contenedor flex --}}
-            <div class="bg-gray-300 flex">
-                <div class="bg-gray-400 text-gray-700 p-2 m-2">1</div>
-                <div class="bg-gray-400 text-gray-700 p-2 m-2">2</div>
-                <div class="bg-gray-400 text-gray-700 p-2 m-2">3</div>
+            {{-- Contenedor flex, todas las cajas deben ir dentro de un contenedor --}}
+            <div class="bg-gray-300 flex flex-row-reverse flex-c">
+                {{-- 
+                    Ejes flex
+                        * Eje main-axis: por defecto es flex-row, pero existe flex-col
+                            - Row: distribuye las cajas de izquierda a derecha en filas
+                            - Col: distribuye las cajas de arriba a abajo en columnas
+                        * Eje cross-axis: 
+                --}}
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2">1</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2">2</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2">3</div>
             </div>
         </div>
     </section>
