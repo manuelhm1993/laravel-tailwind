@@ -15,13 +15,13 @@ class HomeController extends Controller
     {
         // Devuelve todos los archivos de un directorio
         $images = Storage::files('img');
-        $content = $this->getContent(3, 2, 6);
+        $content = $this->getContent(4);
         
         return view('welcome', compact('images', 'content'));
     }
 
     // Contenido de prueba
-    private function getContent(int $parrafos = 5, $min = 10, $max = 25): array
+    private function getContent(int $parrafos = 5, $min = 5, $max = 10): array
     {
         $content = [];
 
