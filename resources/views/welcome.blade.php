@@ -19,8 +19,9 @@
             <div class="bg-blue-600">
                 {{-- Display inline-block --}}
                 <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline-block">1</div>
-                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline-block">2</div>
-                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline-block">3</div>
+                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 my-2 inline-block">2</div>
+                {{-- La clase hidden permite ocultar elementos --}}
+                <div class="bg-gray-400 text-gray-700 text-center px-4 py-2 inline-block lg:hidden">3</div>
             </div>
         </div>
     </section>
