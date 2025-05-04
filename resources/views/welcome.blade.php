@@ -16,7 +16,7 @@
             <h1>Layout</h1>
 
             {{-- Contenedor flex, todas las cajas deben ir dentro de un contenedor --}}
-            <div class="bg-gray-300 flex justify-center items-start h-64">
+            <div class="bg-gray-300 flex">
                 {{-- 
                     Ejes flex
                         * Eje main-axis: por defecto es flex-row, pero existe flex-col
@@ -28,9 +28,9 @@
                             - El eje cross-axis establece que se ocupe todo el espacio posible
                             - Clases: items
                 --}}
-                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 w-64 self-stretch">1</div>
-                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 w-64 self-center">2</div>
-                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 w-64 self-end">3</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 flex-1">1</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 flex-1">2</div>
+                <div class="bg-gray-400 text-gray-700 py-2 px-4 m-2 flex-1">3</div>
             </div>
         </div>
     </section>
