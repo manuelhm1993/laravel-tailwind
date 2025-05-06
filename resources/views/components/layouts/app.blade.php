@@ -25,26 +25,6 @@
 
     @livewireScripts
 
-    <script>
-        let toggleMenu = null;
-        
-        window.addEventListener('load', (e) => {
-            toggleMenu = document.querySelector('div[aria-labelledby="user-menu-button"]');
-
-            toggleProfileMenu(toggleMenu);
-        });
-
-        document.addEventListener('click', (e) => {
-            const target = e.target;
-            const btn = target.closest('button');
-
-            if(btn.id === 'user-menu-button') 
-            {
-                toggleProfileMenu(toggleMenu);
-            }
-        });
-    </script>
-
     @stack('js')
 </body>
 </html>
