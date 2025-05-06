@@ -4,9 +4,9 @@
             {{-- Menú principal md --}}
             <div class="flex items-center">
                 {{-- Logo --}}
-                <div class="shrink-0">
+                <a href="{{ route('home') }}" class="shrink-0">
                     <img class="size-8" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-                </div>
+                </a>
 
                 {{-- Menú md --}}
                 <div class="hidden md:block">
