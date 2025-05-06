@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel - Tailwindcss</title>
 
-    @stack('css')
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @livewireStyles
+
+    @stack('css')
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
@@ -22,6 +22,8 @@
             {{ $slot }}
         </main>
     </div>
+
+    @livewireScripts
 
     <script>
         let toggleMenu = null;
@@ -44,7 +46,5 @@
     </script>
 
     @stack('js')
-
-    @livewireScripts
 </body>
 </html>
