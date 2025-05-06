@@ -11,10 +11,23 @@
     @livewireStyles
 </head>
 <body>
-    {{-- Contenedor principal --}}
-    <section class="container py-4">
-        {{ $slot }}
-    </section>
+    <main class="container">
+        @if (!$header->isEmpty())
+        <header>
+            {{ $header }}
+        </header>
+        @endif
+        {{-- Contenedor principal --}}
+        <section class="container py-4">
+            {{ $slot }}
+        </section>
+
+        @if (!$footer->isEmpty())
+        <footer>
+            {{ $footer }}
+        </footer>
+        @endif
+    </main>
 
     @livewireScripts
 </body>
