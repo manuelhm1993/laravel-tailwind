@@ -52,9 +52,11 @@
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
                                 <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
                                 {{-- Logout --}}
-                                <form method="POST" action="{{ route('logout') }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">
+                                <form method="POST" action="{{ route('logout') }}" x-data>
                                     @csrf
-                                    <button type="submit" class="w-full block text-start">Sign out</button>
+                                    <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                                        {{ __('Sign out') }}
+                                    </x-dropdown-link>
                                 </form>
                             </div>
                         </div>
@@ -124,9 +126,11 @@
                     <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Settings</a>
 
                     {{-- Logout --}}
-                    <form method="POST" action="{{ route('logout') }}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
+                    <form method="POST" action="{{ route('logout') }}" x-data>
                         @csrf
-                        <button type="submit" class="w-full block text-start">Sign out</button>
+                        <x-responsive-nav-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
+                            {{ __('Log Out') }}
+                        </x-responsive-nav-link>
                     </form>
                 </div>
             </div>
