@@ -6,28 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel - Tailwindcss</title>
 
+    @stack('css')
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @livewireStyles
 </head>
-<body>
-    <main class="container">
-        @if (!$header->isEmpty())
-        <header>
-            {{ $header }}
-        </header>
-        @endif
-        {{-- Contenedor principal --}}
-        <section class="container py-4">
-            {{ $slot }}
-        </section>
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray-100">
+        {{-- Llamar a un componente de livewire --}}
+        @livewire('navigation')
 
-        @if (!$footer->isEmpty())
-        <footer>
-            {{ $footer }}
-        </footer>
-        @endif
-    </main>
+        {{-- Contenedor principal --}}
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
+
+    @stack('js')
 
     @livewireScripts
 </body>
