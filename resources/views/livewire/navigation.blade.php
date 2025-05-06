@@ -1,6 +1,7 @@
 <nav class="bg-gray-800" x-data="{ menuMovil: false }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
+            {{-- Menú principal md --}}
             <div class="flex items-center">
                 {{-- Logo --}}
                 <div class="shrink-0">
